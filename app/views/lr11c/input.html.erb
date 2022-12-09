@@ -1,0 +1,14 @@
+<h3>Задание:</h3> Найти все числа, которые являются автоморфными
+<h4>Форма</h4>
+<%= form_with url: "/view", data: { behavior: "autosave" }, method: :get do |form| %>
+  <p><%= form.label :query, "Введите n" %></p>
+  <%= number_field_tag :number, id: 'number' %> <br/>
+  <%= submit_tag("Найти", id: 'btn') %>
+<% end %>
+
+
+<%= form_with url: "show", data:{turbo:false}, method: :get do |form1| %>
+  <div class="button">
+    <%= form1.submit "XML", class:"btn btn-primary" %>
+  </div>
+<% end %>
